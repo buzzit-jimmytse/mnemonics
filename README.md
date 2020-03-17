@@ -18,7 +18,7 @@ Multi-Class Incremental Learning (MCIL) aims to learn new concepts by incrementa
 
 
 <p align="center">
-    <img src="https://yyliu.net/images/misc/mnemonics.png" width="400"/>
+    <img src="https://yyliu.net/images/misc/mnemonics.png" width="600"/>
 </p>
 
 > Figure: The t-SNE results of three exemplar methods in two phases. The original data of 5 colored classes occur in the early phase. In each colored class, deep-color points are exemplars, and light-color ones show the original data as reference of the real data distribution. Gray crosses represent other participating classes, and each cross for one class. We have two main observations. (1) Our approach results in much clearer separation in the data, than random (where exemplars are randomly sampled in the early phase) and herding (where exemplars are nearest neighbors of the mean sample in the early phase). (2) Our learned exemplars mostly locate on the boundaries between classes.
