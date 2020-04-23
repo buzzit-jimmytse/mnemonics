@@ -3,7 +3,7 @@
 [![LICENSE](https://img.shields.io/badge/license-MIT-green)](https://github.com/yaoyao-liu/mnemonics/blob/master/LICENSE)
 [![Python](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/)
 ![PyTorch](https://img.shields.io/badge/pytorch-0.4.0-%237732a8)
-[![CodeFactor](https://www.codefactor.io/repository/github/yaoyao-liu/mnemonics/badge)](https://www.codefactor.io/repository/github/yaoyao-liu/mnemonics)
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/yaoyao-liu/mnemonics)
 
 This repository contains the PyTorch implementation for [CVPR 2020](http://cvpr2020.thecvf.com/) Paper "[Mnemonics Training: Multi-Class Incremental Learning without Forgetting](https://arxiv.org/pdf/2002.10211.pdf)" by [Yaoyao Liu](https://yyliu.net/), [Yuting Su](https://www.iti-tju.org/#/people/suyutingEnglish), [An-An Liu](https://www.iti-tju.org/#/people/liuananEnglish), [Bernt Schiele](https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/people/bernt-schiele/), and [Qianru Sun](https://qianrusun1015.github.io).
 
