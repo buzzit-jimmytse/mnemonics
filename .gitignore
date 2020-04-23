@@ -1,0 +1,15 @@
+# File types
+*.pyc
+*.npy
+
+# Folders
+data
+logs
+logs1
+__pycache__
+
+# File
+bashrc
+.DS_Store
+git-update.sh
+run_exp.py
