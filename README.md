@@ -33,14 +33,14 @@ Multi-Class Incremental Learning (MCIL) aims to learn new concepts by incrementa
 
 ### Installation
 
-In order to run this repository, we advise you to install python 3.6 and PyTorch 1.2.0 with Anaconda.
+In order to run this repository, we advise you to install python 3.7 and PyTorch 1.2.0 with Anaconda.
 You may download Anaconda and read the installation instruction on their official website:
 <https://www.anaconda.com/download/>
 
 Create a new environment and install PyTorch and torchvision on it:
 ```bash
-conda create --name e3bm-pytorch python=3.6
-conda activate e3bm-pytorch
+conda create --name mnemonics-pytorch python=3.7
+conda activate mnemonics-pytorch
 conda install pytorch=1.2.0 
 conda install torchvision -c pytorch
 ```
@@ -52,19 +52,9 @@ pip install -r requirements.txt
 
 ### Running Experiments
 
-Run meta-training with default settings (data and pre-trained model will be downloaded automatically):
+Run the experiment):
 ```bash
-python main.py --phase_sib=meta_train
-```
-
-Run meta-test with our checkpoint (data and the checkpoint will be downloaded automatically):
-```bash
-python main.py --phase_sib=meta_eval
-```
-
-Run meta-test with other checkpoints:
-```bash
-python main.py --phase_sib=meta_eval --meta_eval_load_path=<your_ckpt_dir>
+python main.py --nb_cl_fg=50 --nb_cl=2 --imprint_weights --use_mtl
 ```
 
 ## Citation
