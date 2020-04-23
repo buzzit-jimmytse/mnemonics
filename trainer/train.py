@@ -135,7 +135,7 @@ class Trainer(object):
                 tg_model = self.network(num_classes=self.args.nb_cl_fg)
                 in_features = tg_model.fc.in_features
                 out_features = tg_model.fc.out_features
-                print("in_features:", in_features, "out_features:", out_features)
+                print("In_features:", in_features, "out_features:", out_features)
                 ref_model = None
             elif iteration == start_iter+1:
                 last_iter = iteration
