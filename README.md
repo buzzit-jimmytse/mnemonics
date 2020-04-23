@@ -52,7 +52,7 @@ pip install -r requirements.txt
 
 Run the experiment):
 ```bash
-python main.py --nb_cl_fg=50 --nb_cl=2 --imprint_weights --use_mtl
+python main.py --nb_cl_fg=50 --nb_cl=2 --nb_protos 20 --resume ---imprint_weights --use_mtl
 ```
 
 ## Citation
