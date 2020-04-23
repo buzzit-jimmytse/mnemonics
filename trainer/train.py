@@ -246,8 +246,7 @@ class Trainer(object):
                 index2 = np.where(map_Y_train<iteration*self.args.nb_cl)[0]
                 assert((index1==index2).all())
                 train_sampler = torch.utils.data.sampler.WeightedRandomSampler(rs_sample_weights, rs_num_samples)
-                trainloader = torch.utils.data.DataLoader(self.trainset, batch_size=self.args.train_batch_size, \
-                    shuffle=False, sampler=train_sampler, num_workers=self.args.num_workers)            
+                trainloader = torch.utils.data.DataLoader(self.trainset, batch_size=self.args.train_batch_size, shuffle=False, sampler=train_sampler, num_workers=self.args.num_workers)            
             else:
                 trainloader = torch.utils.data.DataLoader(self.trainset, batch_size=self.args.train_batch_size,
                     shuffle=True, num_workers=self.args.num_workers)
@@ -274,8 +273,7 @@ class Trainer(object):
                     ref_model = ref_model.to(self.device)
 
                     ignored_params = list(map(id, tg_model.fc.fc1.parameters()))
-                    base_params = filter(lambda p: id(p) not in ignored_params, \
-                        tg_model.parameters())
+                    base_params = filter(lambda p: id(p) not in ignored_params, tg_model.parameters())
 
                     base_params = filter(lambda p: p.requires_grad,base_params)
                     tg_params_new =[{'params': base_params, 'lr': self.args.base_lr2, 'weight_decay': self.args.custom_weight_decay}, {'params': tg_model.fc.fc1.parameters(), 'lr': 0, 'weight_decay': 0}]

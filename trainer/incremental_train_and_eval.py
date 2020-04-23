@@ -179,8 +179,7 @@ def incremental_train_and_eval(epochs, tg_model, ref_model, tg_optimizer, tg_lr_
                 _, predicted = outputs.max(1)
                 total += targets.size(0)
                 correct += predicted.eq(targets).sum().item()
-        print('Test set: {} test loss: {:.4f} accuracy: {:.4f}'.format(\
-            len(testloader), test_loss/(batch_idx+1), 100.*correct/total))
+        print('Test set: {} test loss: {:.4f} accuracy: {:.4f}'.format(len(testloader), test_loss/(batch_idx+1), 100.*correct/total))
 
     # Remove refuster forward hook if it is necessary
     if iteration > start_iteration:
