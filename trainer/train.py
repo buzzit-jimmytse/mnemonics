@@ -390,10 +390,7 @@ class Trainer(object):
             current_means = class_means[:, order[range(0,(iteration+1)*self.args.nb_cl)]]
 
             # Set iteration labels
-            if iteration == start_iter:
-                is_start_iteration = True
-            else:
-                is_start_iteration = False
+            is_start_iteration = (iteration == start_iter)
 
             # Calculate validation error of model on the first nb_cl classes
             map_Y_valid_ori = np.array([order_list.index(i) for i in Y_valid_ori])
@@ -422,4 +419,5 @@ class Trainer(object):
         # Save data and close tensorboard
         torch.save(top1_acc_list_ori, osp.join(self.save_path, 'run_{}_top1_acc_list_ori.pth'.format(iteration_total)))
         torch.save(top1_acc_list_cumul, osp.join(self.save_path, 'run_{}_top1_acc_list_cumul.pth'.format(iteration_total)))
-        self.train_writer.close()
+        self.train_writer.close
+        
