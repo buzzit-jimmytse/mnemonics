@@ -1,2 +1,4 @@
 tensorboardX
 tqdm
+scipy
+Pillow==6.1
