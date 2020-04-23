@@ -29,6 +29,28 @@ Multi-Class Incremental Learning (MCIL) aims to learn new concepts by incrementa
 
 > Figure: The t-SNE results of three exemplar methods in two phases. The original data of 5 colored classes occur in the early phase. In each colored class, deep-color points are exemplars, and light-color ones show the original data as reference of the real data distribution. Gray crosses represent other participating classes, and each cross for one class. We have two main observations. (1) Our approach results in much clearer separation in the data, than random (where exemplars are randomly sampled in the early phase) and herding (where exemplars are nearest neighbors of the mean sample in the early phase). (2) Our learned exemplars mostly locate on the boundaries between classes.
 
+## Project Architecture
+
+```
+.
+├── models                             # model files
+|   ├── modified_linear.py             # modified liner class
+|   ├── modified_resnet_cifar.py       # modified resnet class
+|   └── modified_resnetmtl_cifar.py    # modified resnet with transferring weights class
+├── trainer                            # trianer files  
+|   ├── incremental_train_and_eval.py  # incremental learning for one phase
+|   ├── mnemonics_train.py             # mnemonics training class
+|   └── train.py                       # main trainer class
+├── utils                              # a series of tools used in this repo
+|   ├── compute_accuracy.py            # function for computing accuracy
+|   ├── compute_features.py            # function for computing features
+|   ├── conv2d_mtl.py                  # transferring weights tools
+|   ├── gpu_tools.py                   # GPU tools
+|   ├── misc.py                        # miscellaneous tool functions
+|   └── process_mnemonics.py           # function for processing mnemonics exemplars
+└── main.py                            # the python file with main function and parameter settings
+```
+
 ### Installation
 
 In order to run this repository, we advise you to install python 3.7 and PyTorch 1.2.0 with Anaconda.
