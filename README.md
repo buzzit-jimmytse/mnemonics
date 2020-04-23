@@ -59,7 +59,7 @@ You may download Anaconda and read the installation instruction on their officia
 
 Create a new environment and install PyTorch and torchvision on it:
 ```bash
-conda create --name mnemonics-pytorch python=3.6.8
+conda create --name mnemonics-pytorch python=3.6
 conda activate mnemonics-pytorch
 conda install pytorch=0.4.0 
 conda install torchvision=0.2.1
