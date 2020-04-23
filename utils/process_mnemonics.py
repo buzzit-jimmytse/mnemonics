@@ -14,6 +14,7 @@ import time
 import os
 import argparse
 import numpy as np
+"""Functions for process mnemonics exemplars."""
 
 def tensor2im(input_image, imtype=np.uint8):
     """"Transfer images in tensors to numpy arrays
