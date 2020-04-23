@@ -54,8 +54,6 @@ class Trainer(object):
         if not osp.exists(self.log_dir):
             os.mkdir(self.log_dir)
         self.save_path = self.log_dir + self.args.dataset + '_nfg' + str(self.args.nb_cl_fg) + '_ncls' + str(self.args.nb_cl) + '_nproto' + str(self.args.nb_protos) 
-        if self.args.use_mtl:
-            self.save_path += '_mtl'
         if self.args.fix_budget:
             self.save_path += '_fixbudget'            
         self.save_path += '_' + str(self.args.ckpt_label)

@@ -16,7 +16,7 @@ from utils.gpu_tools import occupy_memory
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--gpu', default='0') # GPU id 
+    parser.add_argument('--gpu', default='0')
     parser.add_argument('--dataset', default='cifar100', type=str, choices=['cifar100', 'imagenet_sub', 'imagenet'])
     parser.add_argument('--data_dir', default='data/seed_1993_subset_100_imagenet/data', type=str)
     parser.add_argument('--num_classes', default=100, type=int)
@@ -33,7 +33,6 @@ if __name__ == '__main__':
     parser.add_argument('--fix_budget', action='store_true')
     parser.add_argument('--phase', type=str, default='train', choices=['train', 'eval'])
     parser.add_argument('--ckpt_label', type=str, default='exp01')
-    parser.add_argument('--use_mtl', action='store_true')
     parser.add_argument('--num_workers', default=2, type=int)
     parser.add_argument('--load_iter', default=0, type=int)
     parser.add_argument('--dictionary_size', default=500, type=int)
@@ -84,15 +83,6 @@ if __name__ == '__main__':
     occupy_memory(the_args.gpu)
     print('Occupy GPU memory in advance')
 
-    if the_args.phase=='train':
-        trainer = Trainer(the_args)
-        trainer.train()
-    elif the_args.phase=='eval':
-        trainer = Trainer(the_args)
-        trainer.eval()
-    else:
-        raise ValueError('Please set correct phase')
-
-
-
+    trainer = Trainer(the_args)
+    trainer.train()
 
