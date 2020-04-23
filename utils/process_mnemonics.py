@@ -47,20 +47,6 @@ def tensor2im(input_image, imtype=np.uint8):
         image_numpy = input_image
     return image_numpy.astype(imtype)
 
-def map_labels_back(order_list, Y_set):
-    """The function for mapping labels between the true class order and relative class order (reversed version).
-    Args:
-      order_list: the list of the true class order and relative class order.
-      Y_set: the labels before mapping.
-    Return:
-      The labels after mapping.
-    """
-    map_Y = []
-    for idx in Y_set:
-        map_Y.append(order_list.index(idx))
-    map_Y = np.array(map_Y)
-    return map_Y
-
 def process_mnemonics(X_protoset_cumuls, Y_protoset_cumuls, mnemonics, mnemonics_label, order_list):
     """Process mnemonics exemplars
     Args:
