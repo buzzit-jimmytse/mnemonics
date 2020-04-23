@@ -24,7 +24,6 @@ def tensor2im(input_image, imtype=np.uint8):
     Returns:
       Images in numpy arrays.
     """
-
     # Mean and std for dataloader
     mean = [0.5071,  0.4866,  0.4409]
     std = [0.2009,  0.1984,  0.2023]
