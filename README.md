@@ -97,4 +97,4 @@ Our implementation uses the source code from the following repositories:
 
 * [Learning a Unified Classifier Incrementally via Rebalancing](https://github.com/hshustc/CVPR19_Incremental_Learning)
 
-* [https://github.com/srebuffi/iCaRL](https://github.com/srebuffi/iCaRL)
+* [iCaRL: Incremental Classifier and Representation Learning](https://github.com/srebuffi/iCaRL)
