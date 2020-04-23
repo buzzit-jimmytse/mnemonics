@@ -62,7 +62,7 @@ Create a new environment and install PyTorch and torchvision on it:
 conda create --name mnemonics-pytorch python=3.7
 conda activate mnemonics-pytorch
 conda install pytorch=1.2.0 
-conda install torchvision -c pytorch
+conda install torchvision=0.2.1
 ```
 
 Install other requirements:
