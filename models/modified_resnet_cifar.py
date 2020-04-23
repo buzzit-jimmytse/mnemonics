@@ -8,7 +8,7 @@
 ## This source code is licensed under the MIT-style license found in the
 ## LICENSE file in the root directory of this source tree
 ##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-""" Modified ResNet. """
+"""Modified ResNet."""
 import math
 import torch.nn as nn
 import torch.utils.model_zoo as model_zoo
