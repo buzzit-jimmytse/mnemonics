@@ -160,9 +160,9 @@ def incremental_train_and_eval(epochs, tg_model, ref_model, tg_optimizer, tg_lr_
 
         # Print losses and accuracies
         if iteration == start_iteration:
-            print('Train set: {}, train Loss: {:.4f} accuracy: {:.4f}'.format(len(trainloader), train_loss/(batch_idx+1), 100.*correct/total))
+            print('Train set: {}, train loss: {:.4f} accuracy: {:.4f}'.format(len(trainloader), train_loss/(batch_idx+1), 100.*correct/total))
         else:
-            print('Train set: {}, train Loss1: {:.4f}, train loss2: {:.4f}, train loss3: {:.4f}, train loss: {:.4f} accuracy: {:.4f}'.format(len(trainloader), train_loss1/(batch_idx+1), train_loss2/(batch_idx+1), train_loss3/(batch_idx+1), train_loss/(batch_idx+1), 100.*correct/total))
+            print('Train set: {}, train Llss1: {:.4f}, train loss2: {:.4f}, train loss3: {:.4f}, train loss: {:.4f} accuracy: {:.4f}'.format(len(trainloader), train_loss1/(batch_idx+1), train_loss2/(batch_idx+1), train_loss3/(batch_idx+1), train_loss/(batch_idx+1), 100.*correct/total))
 
         # Run evaluation for the current incremental phase
         # The following steps are similar to training
@@ -179,7 +179,7 @@ def incremental_train_and_eval(epochs, tg_model, ref_model, tg_optimizer, tg_lr_
                 _, predicted = outputs.max(1)
                 total += targets.size(0)
                 correct += predicted.eq(targets).sum().item()
-        print('Test set: {} test Loss: {:.4f} accuracy: {:.4f}'.format(\
+        print('Test set: {} test loss: {:.4f} accuracy: {:.4f}'.format(\
             len(testloader), test_loss/(batch_idx+1), 100.*correct/total))
 
     # Remove refuster forward hook if it is necessary
