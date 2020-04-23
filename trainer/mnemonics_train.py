@@ -7,26 +7,16 @@
 ## This source code is licensed under the MIT-style license found in the
 ## LICENSE file in the root directory of this source tree
 ##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-""" Trainer for mnemonics. """
+"""Trainer for mnemonics."""
 import torch
-import tqdm
-import time
-import os
 import copy
-import argparse
-import torchvision
 import torch.nn as nn
 import numpy as np
 import torch.nn.functional as F
 import torch.optim as optim
-from torch.optim import lr_scheduler
-from torchvision import datasets, models, transforms
-from torch.autograd import Variable
+from torchvision import datasets, transforms
 from PIL import Image
-from scipy.spatial.distance import cdist
-from sklearn.metrics import confusion_matrix
 from utils.misc import *
-from tensorboardX import SummaryWriter
 
 def map_labels(order_list, Y_set):
     """The function for mapping labels between the true class order and relative class order.

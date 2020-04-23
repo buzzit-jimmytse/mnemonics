@@ -1,10 +1,19 @@
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## Created by: Yaoyao Liu
+## MPI for Informatics
+## yaoyao.liu@mpi-inf.mpg.de
+## Copyright (c) 2020
+##
+## This source code is licensed under the MIT-style license found in the
+## LICENSE file in the root directory of this source tree
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+"""Transferring weight tool."""
 import math
 import torch
 from torch.nn.parameter import Parameter
 import torch.nn.functional as F
 from torch.nn.modules.module import Module
 from torch.nn.modules.utils import _single, _pair, _triple
-
 
 class _ConvNdMtl(Module):
 

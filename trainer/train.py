@@ -8,10 +8,8 @@
 ## This source code is licensed under the MIT-style license found in the
 ## LICENSE file in the root directory of this source tree
 ##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-""" Trainer for incremental learning. """
-import sys
+"""Trainer for incremental learning."""
 import copy
-import argparse
 import os
 import torch
 import torchvision
@@ -27,25 +25,19 @@ import models.modified_resnet_cifar as modified_resnet_cifar
 import models.modified_resnetmtl_cifar as modified_resnetmtl_cifar
 import models.modified_linear as modified_linear
 from torch.optim import lr_scheduler
-from torchvision import datasets, models, transforms
-from torch.autograd import Variable
+from torchvision import datasets, transforms
 from tensorboardX import SummaryWriter
-from PIL import Image
 from utils.compute_features import compute_features
 from utils.process_mnemonics import process_mnemonics
 from utils.compute_accuracy import compute_accuracy
 from trainer.incremental_train_and_eval import incremental_train_and_eval
 from trainer.mnemonics_train import MnemonicsTrainer
-try:
-    import cPickle as pickle
-except:
-    import pickle
+from utils.misc import *
 warnings.filterwarnings('ignore')
 
 class Trainer(object):
     def __init__(self, the_args):
         """The class that contains the code for the train phase."""
-
         # Share argparse in this class
         self.args = the_args
 

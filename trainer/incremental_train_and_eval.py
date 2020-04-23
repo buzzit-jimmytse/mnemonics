@@ -8,21 +8,12 @@
 ## This source code is licensed under the MIT-style license found in the
 ## LICENSE file in the root directory of this source tree
 ##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-""" Incremental learning and evaluation function. """
+"""Incremental learning and evaluation function."""
 import torch
-import os
-import copy
-import argparse
 import tqdm
-import torchvision
-import numpy as np
 import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
 from torch.optim import lr_scheduler
 from torchvision import datasets, models, transforms
-from torch.autograd import Variable
-from PIL import Image
 from utils.misc import *
 
 # Set empty list for features and secores

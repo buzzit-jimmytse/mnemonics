@@ -8,19 +8,16 @@
 ## This source code is licensed under the MIT-style license found in the
 ## LICENSE file in the root directory of this source tree
 ##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-""" Some tools. """
+"""Some tools."""
 from __future__ import print_function, division
 import os
 import torch
 import sys
 import time
-import math
 import subprocess
 import torch.nn as nn
 import torch.nn.init as init
-import numpy as np
 import os.path as osp
-from collections import OrderedDict
 try:
     import cPickle as pickle
 except:

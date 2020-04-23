@@ -8,22 +8,13 @@
 ## This source code is licensed under the MIT-style license found in the
 ## LICENSE file in the root directory of this source tree
 ##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-""" Accuracy calculation function. """
-import os
-import copy
-import argparse
+"""Accuracy calculation function."""
 import torch
 import torchvision
 import numpy as np
-import torch.nn as nn
 import torch.nn.functional as F
-import torch.optim as optim
-from torch.optim import lr_scheduler
 from torchvision import datasets, models, transforms
-from torch.autograd import Variable
-from PIL import Image
 from scipy.spatial.distance import cdist
-from sklearn.metrics import confusion_matrix
 from utils.misc import *
 
 def map_labels(order_list, Y_set):
