@@ -162,10 +162,9 @@ def incremental_train_and_eval(epochs, tg_model, ref_model, tg_optimizer, tg_lr_
         if iteration == start_iteration:
             print('Train set: {}, train Loss: {:.4f} accuracy: {:.4f}'.format(len(trainloader), train_loss/(batch_idx+1), 100.*correct/total))
         else:
-            print('Train set: {}, train Loss1: {:.4f}, train Loss2: {:.4f}, train Loss3: {:.4f}, train Loss: {:.4f} accuracy: {:.4f}'.format(len(trainloader), train_loss1/(batch_idx+1), train_loss2/(batch_idx+1), train_loss3/(batch_idx+1), train_loss/(batch_idx+1), 100.*correct/total))
+            print('Train set: {}, train Loss1: {:.4f}, train loss2: {:.4f}, train loss3: {:.4f}, train loss: {:.4f} accuracy: {:.4f}'.format(len(trainloader), train_loss1/(batch_idx+1), train_loss2/(batch_idx+1), train_loss3/(batch_idx+1), train_loss/(batch_idx+1), 100.*correct/total))
 
         # Run evaluation for the current incremental phase
-
         # The following steps are similar to training
         tg_model.eval()
         test_loss = 0
