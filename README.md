@@ -4,8 +4,6 @@
 [![Python](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/)
 ![PyTorch](https://img.shields.io/badge/pytorch-1.2.0-%237732a8)
 
-### Code will be released soon.
-
 This repository contains the PyTorch implementation for [CVPR 2020](http://cvpr2020.thecvf.com/) Paper "[Mnemonics Training: Multi-Class Incremental Learning without Forgetting](https://arxiv.org/pdf/2002.10211.pdf)" by [Yaoyao Liu](https://yyliu.net/), An-An Liu, Yuting Su, [Bernt Schiele](https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/people/bernt-schiele/), and [Qianru Sun](https://qianrusun1015.github.io).
 
 If you have any questions on this repository or the related paper, feel free to [create an issue](https://github.com/yaoyao-liu/mnemonics/issues/new) or send me an email. 
