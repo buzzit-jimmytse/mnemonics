@@ -12,6 +12,14 @@ If you have any questions on this repository or the related paper, feel free to 
 <br>
 Email address: yaoyao.liu (at) mpi-inf.mpg.de
 
+#### Summary
+
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [Running Experiments](#running-experiments)
+* [Citation](#citation)
+* [Acknowledgements](#acknowledgements)
+
 ## Introduction
 
 Multi-Class Incremental Learning (MCIL) aims to learn new concepts by incrementally updating a model trained on previous concepts. However, there is an inherent trade-off to effectively learning new concepts without catastrophic forgetting of previous ones. To alleviate this issue, it has been proposed to keep around a few examples of the previous concepts but the effectiveness of this approach heavily depends on the representativeness of these examples. This paper proposes a novel and automatic framework we call *mnemonics*, where we parameterize exemplars and make them optimizable in an end-to-end manner. We train the framework through bilevel optimizations, i.e., model-level and exemplar-level. We conduct extensive experiments on three MCIL benchmarks, CIFAR-100, ImageNet-Subset and ImageNet, and show that using mnemonics exemplars can surpass the state-of-the-art by a large margin. Interestingly and quite intriguingly, the mnemonics exemplars tend to be on the boundaries between classes.
@@ -22,6 +30,42 @@ Multi-Class Incremental Learning (MCIL) aims to learn new concepts by incrementa
 </p>
 
 > Figure: The t-SNE results of three exemplar methods in two phases. The original data of 5 colored classes occur in the early phase. In each colored class, deep-color points are exemplars, and light-color ones show the original data as reference of the real data distribution. Gray crosses represent other participating classes, and each cross for one class. We have two main observations. (1) Our approach results in much clearer separation in the data, than random (where exemplars are randomly sampled in the early phase) and herding (where exemplars are nearest neighbors of the mean sample in the early phase). (2) Our learned exemplars mostly locate on the boundaries between classes.
+
+### Installation
+
+In order to run this repository, we advise you to install python 3.6 and PyTorch 1.2.0 with Anaconda.
+You may download Anaconda and read the installation instruction on their official website:
+<https://www.anaconda.com/download/>
+
+Create a new environment and install PyTorch and torchvision on it:
+```bash
+conda create --name e3bm-pytorch python=3.6
+conda activate e3bm-pytorch
+conda install pytorch=1.2.0 
+conda install torchvision -c pytorch
+```
+
+Install other requirements:
+```bash
+pip install -r requirements.txt
+```
+
+### Running Experiments
+
+Run meta-training with default settings (data and pre-trained model will be downloaded automatically):
+```bash
+python main.py --phase_sib=meta_train
+```
+
+Run meta-test with our checkpoint (data and the checkpoint will be downloaded automatically):
+```bash
+python main.py --phase_sib=meta_eval
+```
+
+Run meta-test with other checkpoints:
+```bash
+python main.py --phase_sib=meta_eval --meta_eval_load_path=<your_ckpt_dir>
+```
 
 ## Citation
 
@@ -36,3 +80,11 @@ month = {June},
 year = {2020}
 }
 ```
+
+### Acknowledgements
+
+Our implementation uses the source code from the following repositories:
+
+* [Learning a Unified Classifier Incrementally via Rebalancing](https://github.com/hshustc/CVPR19_Incremental_Learning)
+
+* [https://github.com/srebuffi/iCaRL](https://github.com/srebuffi/iCaRL)
