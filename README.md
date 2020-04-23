@@ -1,7 +1,7 @@
 ## Mnemonics Training: Multi-Class Incremental Learning without Forgetting
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-green)](https://github.com/yaoyao-liu/mnemonics/blob/master/LICENSE)
-[![Python](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/)
 ![PyTorch](https://img.shields.io/badge/pytorch-1.2.0-%237732a8)
 
 This repository contains the PyTorch implementation for [CVPR 2020](http://cvpr2020.thecvf.com/) Paper "[Mnemonics Training: Multi-Class Incremental Learning without Forgetting](https://arxiv.org/pdf/2002.10211.pdf)" by [Yaoyao Liu](https://yyliu.net/), [Yuting Su](https://www.iti-tju.org/#/people/suyutingEnglish), [An-An Liu](https://www.iti-tju.org/#/people/liuananEnglish), [Bernt Schiele](https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/people/bernt-schiele/), and [Qianru Sun](https://qianrusun1015.github.io).
@@ -53,15 +53,15 @@ Multi-Class Incremental Learning (MCIL) aims to learn new concepts by incrementa
 
 ## Installation
 
-In order to run this repository, we advise you to install python 3.7 and PyTorch 1.2.0 with Anaconda.
+In order to run this repository, we advise you to install python 3.6 and PyTorch 1.2.0 with Anaconda.
 You may download Anaconda and read the installation instruction on their official website:
 <https://www.anaconda.com/download/>
 
 Create a new environment and install PyTorch and torchvision on it:
 ```bash
-conda create --name mnemonics-pytorch python=3.7
+conda create --name mnemonics-pytorch python=3.6.8
 conda activate mnemonics-pytorch
-conda install pytorch=1.2.0 
+conda install pytorch=0.4.0 
 conda install torchvision=0.2.1
 ```
 
