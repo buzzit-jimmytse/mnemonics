@@ -51,7 +51,7 @@ Multi-Class Incremental Learning (MCIL) aims to learn new concepts by incrementa
 └── main.py                            # the python file with main function and parameter settings
 ```
 
-### Installation
+## Installation
 
 In order to run this repository, we advise you to install python 3.7 and PyTorch 1.2.0 with Anaconda.
 You may download Anaconda and read the installation instruction on their official website:
@@ -70,7 +70,7 @@ Install other requirements:
 pip install -r requirements.txt
 ```
 
-### Running Experiments
+## Running Experiments
 
 Run the experiment:
 ```bash
