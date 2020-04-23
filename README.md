@@ -72,7 +72,7 @@ pip install -r requirements.txt
 
 ## Running Experiments
 
-Run the experiment:
+Run the experiment using the following command:
 ```bash
 python main.py --nb_cl_fg=50 --nb_cl=2 --nb_protos 20 --resume --imprint_weights
 ```
